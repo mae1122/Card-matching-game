@@ -41,7 +41,7 @@ class Card:
         if self.face_up:
             self.card.undraw()
             self.card = Image(self.card.getCenter(), "PNG-cards-1.3/" + self.card_name  + ".png")
-            self.card.scale(0.09)
+            self.card.scale(0.13)
             self.card.draw(win)
         else:
             self.card.undraw()

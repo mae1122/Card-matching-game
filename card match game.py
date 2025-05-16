@@ -76,6 +76,12 @@ def createCards(numCards):
         rank = random.choice(RANKS)
         
         card = Card(suit, rank)
+        for i in cards:
+            while card.cardValue() == i.cardValue():
+                suit = random.choice(SUITS)
+                rank = random.choice(RANKS)
+                card = Card(suit, rank)
+        
         cards.append(card)
         
         card = Card(suit, rank)
