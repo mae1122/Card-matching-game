@@ -59,7 +59,11 @@ class Button:
         "Returns true if button active and point is inside"
         xIsGood = self.rect.getP1().getX() < point.getX() < self.rect.getP2().getX()
         yIsGood = self.rect.getP1().getY() < point.getY() < self.rect.getP2().getY()
-        return self.active and xIsGood and yIsGood
+        
+        if xIsGood and yIsGood:
+            return True
+        else:
+            return False
 
     def getLabel(self):
         "Returns the label string of this button."
